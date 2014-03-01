@@ -1,0 +1,8 @@
+.paging{zoom:1;}
+#main h3 span,
+#header .link,
+#footer .nav li,
+.links li{
+	display:inline;
+	zoom:1;
+}

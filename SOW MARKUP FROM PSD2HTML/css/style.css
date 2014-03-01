@@ -1,0 +1,863 @@
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+
+body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+select, input, textarea, button { font:99% sans-serif; }
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/**
+ * Minimal base styles.
+ */
+
+/* Always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+
+/* Remove margins for navigation lists */
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea { margin: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid {
+   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+
+/* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: #444;
+  /* Set your base font here, to apply evenly */
+  /* font-family: Georgia, serif;  */
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/**
+ * Primary styles
+*/
+* {font-size: 100.01%;}
+html {
+	font-size: 62.5%;
+	min-width:960px
+}
+body {
+	color:#000;
+	background:#000;
+	min-width:960px;
+	font:1.2em/1.17em "MS Sans Serif", Geneva, sans-serif;
+	background:#000 url(../images/bg-body.jpg) no-repeat 50% 0;
+}
+a:visited,
+a {
+	color:#776859;
+	text-decoration:underline;
+}
+a:hover{text-decoration:none;}
+#container a.accessibility {
+	position:absolute;
+	left:-9999px;
+	top:0;
+}
+.wrap{
+	overflow:hidden;
+	width:100%;
+}
+.alignleft{float:left;}
+.alignright{float:right;}
+#container{
+	width:100%;
+	position:relative;
+	overflow:hidden;
+	min-width:960px;
+}
+.container-holder{
+	background: url(../images/bg-container-holder.png) repeat-y;
+	width:960px;
+	margin:0 auto;
+}
+#header {
+	width:100%;
+	margin:0 0 -59px;
+	position:relative;
+}
+.header-holder{
+	overflow:hidden;
+	min-height:140px;
+	padding:0 48px 0 12px;
+	margin:0 0 -2px;
+}
+.logo{
+	float:left;	background:url(../images/logo.png) no-repeat;
+	width: 135px;
+	height: 134px;	text-indent:-9999px;	overflow:hidden;
+	margin:6px 12px 0 0;
+}
+.logo a{
+	display:block;
+	height:100%;
+}
+.header-block{
+	padding:36px 0 0;
+	height:1%;	overflow:hidden;
+}
+#header h1{
+	color:#fff;
+	font:2.5em/1.1333em "FuroreRegular", Arial, Helvetica, sans-serif;
+	margin:0 0 11px;
+}
+#header h1 span{
+	vertical-align:top;
+	position:relative;
+	font-size:20px;
+	top:-4px;
+}
+*+html #header h1 span {
+	top:1px;
+}
+#header .link{
+	font:0.91em/1.181em "FuroreRegular", Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	display:inline-block;
+	vertical-align:top;
+	padding:0 0 2px;
+	margin:0 0 0 51px;
+	background: url(../images/bg-header-link.gif) repeat-x 0 100%;
+}
+#header .link:hover{background:none;}
+#nav{
+	position:absolute;
+	right:48px;
+	top:0;
+	width:750px;
+	z-index:2;
+}
+#nav ul{
+	float:right;
+	font:11px/13px "FuroreRegular", Arial, Helvetica, sans-serif;
+}
+#nav ul li{
+	float:left;
+	width:184px;
+	position:relative;
+	text-align:center;
+	background: url(../images/bg-nav.png) no-repeat 0 100%;
+	padding:0 0 28px;
+	margin:0 0 0 -1px;
+}
+#nav ul a{
+	color:#fff;
+	width:180px;
+	position:absolute;
+	left:2px;
+	bottom:6px;
+	text-decoration:none;
+	text-shadow: 1px 1px 4px #fbfbbd;
+}
+#nav ul a:hover{text-decoration:underline;}
+#nav ul .t{
+	position:absolute;
+	background: url(../images/bg-nav-t.gif) no-repeat;
+	width: 184px;
+	height: 25px;
+	left:0;
+	top:0;
+}
+#nav ul li ul{
+	margin:-4px 0 0;	padding:5px 0 0;
+	border:solid #726126;
+	background:#000;
+	border-width:0 1px;
+	float:left;
+	display:none;
+	font-size:10px;
+	line-height:12px;
+}
+#nav ul li ul:after{	content:"";	display:block;	clear:both;}
+#nav ul li:hover ul{display:block;}
+#nav ul li ul li{
+	background:none;
+	padding:0 0 2px;
+	border-bottom:1px solid #434343;
+	margin:4px 0 -5px;
+	width:182px;
+}
+#nav ul li ul a{
+	position:static;
+	text-shadow:0 0 0 #fff;
+}
+.messages{
+	text-align:right;
+	color:#979797;
+	font:10px/12px Arial, Helvetica, sans-serif;
+	background: url(../images/bg-header-messages.png);
+	padding:3px 0;
+}
+.messages li{
+	display:inline;
+	background: url(../images/separator-messages.gif) no-repeat 0 50%;
+	padding:0 4px 0 6px;
+}
+.messages li:first-child{background:none;}
+#header .section{
+	padding:16px 0 0;
+	position:relative;
+	height:91px;
+	margin:-7px 0 0;
+	background: url(../images/bg-header-section.png) no-repeat;
+}
+#header .section .r,
+#header .section .l{
+	position:absolute;
+	left:0;
+	top:0;
+	background: url(../images/bg-header-section-side.png) repeat-x;
+	height: 107px;
+	padding:0 0 0 9999px;
+	margin:0 0 0 -9999px;
+	font-size:0;
+	line-height:0;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+#header .section .r{
+	padding:0 9999px 0 0;
+	margin:0 -9999px 0 0;
+	left:auto;
+	right:0;
+}
+.search{
+	float:left;
+	margin:0 0 0 142px;
+	width:222px;
+}
+.form .text{
+	background: url(../images/bg-text.gif) no-repeat;
+	width: 172px;
+	height: 28px;
+	float:left;
+	padding:0 14px;
+}
+.form .text input{
+	float:left;
+	border:0;
+	background:none;
+	color:#bcebe9;
+	font-size:13px;
+	line-height:16px;
+	padding:5px 0;
+	margin:0;
+	width:100%;
+	height:18px;
+}
+.search .button{
+	float:left;
+	background: url(../images/btn-search.png) no-repeat;
+	width: 17px;
+	height: 16px;
+	text-indent:-9999px;
+	overflow:hidden;
+	margin:6px 0 0 5px;
+}
+.user-form{
+	float:right;
+	margin:0 142px 0 0;
+}
+.form .text2{
+	background: url(../images/bg-text2.png) no-repeat;
+	width: 72px;
+}
+.form .text3{
+	background: url(../images/bg-text3.png) no-repeat;
+	width: 72px;
+}
+.user-form .submit{
+	background: url(../images/bg-user-form-submit.png) no-repeat;
+	width: 17px;
+	height: 16px;
+	float:left;
+	border:0;
+	cursor:pointer;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0;
+	padding:0;
+	margin:5px 2px 0 0;
+}
+#main{
+	border:solid #808080;
+	border-width:0 1px;
+	width:680px;
+	margin:0 auto;
+}
+#main h2{
+	font:1.33em/1.1875em "FuroreRegular", Arial, Helvetica, sans-serif;
+	height:1%;	overflow:hidden;
+	margin:0 0 15px;
+}
+#main h2 span{
+	background: url(../images/bg-main-heading.gif) no-repeat 50% 100%;
+	float:left;
+	padding:0 0 3px;
+	margin:0 0 0 7px;
+}
+#main .right h2 span{
+	float:right;
+	margin:0 7px 0 0;
+}
+#main h3{
+	font:1.09em/1.25em "FuroreRegular", Arial, Helvetica, sans-serif;
+	height:1%;
+	overflow:hidden;
+	margin:0 0 6px;
+	text-align:center;
+}
+#main h3 span{
+	background: url(../images/bg-main-heading.gif) no-repeat 50% 100%;
+	display:inline-block;
+	vertical-align:top;
+	padding:0 0 3px;
+}
+#main p{margin:0 0 9px;}
+.main-holder{
+	border:solid #aaa;
+	border-width:0 1px;
+	background:#fff;
+	padding:17px 20px 5px;
+}
+.columns{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	z-index:2;
+}
+.columns .col{
+	float:left;
+	width:50%;
+}
+.columns .left{padding:0 20px 0 0;}
+.columns .right{padding-left:20px;}
+.columns img.alignleft{
+	border:1px solid #d4af37;
+	margin:3px 10px 0 0;
+}
+.post img.alignleft{margin:2px 6px 0 0;}
+.columns img.alignright{
+	border:1px solid #d4af37;
+	margin:3px 0 0 10px;
+}
+#main .date{
+	color:#484747;
+	font: italic 0.75em Arial, Helvetica, sans-serif;
+}
+#main .post .date{font-size:0.81em;}
+.ad{margin:0 0 10px;}
+.ad img{
+	display:block;
+}
+.paging{
+	background: url(../images/bg-paging.gif) no-repeat 50% 0;
+	height: 43px;
+	margin:0 -20px -12px;
+	padding:0 74px;
+	position:relative;
+	font:12px/15px Arial, Helvetica, sans-serif;
+}
+.paging .holder{
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+.paging a{
+	text-decoration:none;
+	color:#000;
+}
+.paging a:hover{text-decoration:underline;}
+.paging .next,
+.paging .prev{
+	background: url(../images/bg-prev.png) no-repeat;
+	width: 59px;
+	height: 16px;
+	line-height:16px;
+	position:absolute;
+	left:-2px;
+	color:#fff;
+	padding:0 9px 0 6px;
+	text-align:center;
+}
+.paging .next{
+	background: url(../images/bg-next.png) no-repeat;
+	left: auto;
+	right:-2px;
+	padding:0 6px 0 9px;
+}
+.paging ul{
+	float:left;
+	position:relative;
+	left:50%;
+}
+.paging ul li{
+	float:left;
+	padding:0 7px 0 0;
+	position:relative;
+	text-shadow: 0 0 3px #000;
+}
+.paging ul li:first-child{
+	top:16px;
+	left:-3px;
+	padding-right:22px;
+}
+.post{
+	font-size:11px;
+	line-height:13px;
+	padding:0 28px 6px 0;
+	font-size:0.92em;
+	line-height:1.1818181em;
+}
+.right .post{
+	padding:0 0 6px 28px;
+}
+.post .content{
+	height:1%;	overflow:hidden;
+}
+#footer{
+	margin:-51px 0 0;
+	color:#fff;
+}
+.footer-t{
+	background: url(../images/bg-footer-t.png) no-repeat;
+	width: 960px;
+	height: 107px;
+	position:relative;
+}
+.footer-t .r,
+.footer-t .l{
+	position:absolute;
+	left:0;
+	top:0;
+	background: url(../images/bg-footer-side.png) repeat-x;
+	height: 107px;
+	padding:0 0 0 9999px;
+	margin:0 0 0 -9999px;
+	font-size:0;
+	line-height:0;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.footer-t .r{
+	padding:0 9999px 0 0;
+	margin:0 -9999px 0 0;
+	left:auto;
+	right:0;
+}
+#footer a{
+	color:#fff;
+	text-decoration:none;
+}
+#footer a:hover{text-decoration:underline;}
+.footer-holder{
+	background:#48453d;
+	margin:0 -9999px;
+	padding:0 9999px;
+	width:960px;
+	position:relative;
+}
+.footer-frame{
+	padding:0 30px 8px;
+	overflow:hidden;
+}
+.gallery{
+	width:100%;
+	margin:0 0 30px;
+}
+.gallery:after{	content:"";	display:block;	clear:both;}
+.gallery .next,
+.gallery .prev{
+	background: url(../images/bg-gallery-link.gif) no-repeat;
+	width: 29px;
+	height: 58px;
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	margin:26px 0 0;
+}
+.gallery .next{
+	background-position:0 -58px;
+	float:right;
+}
+.gallery .mask{
+	float:left;
+	width:802px;
+	overflow:hidden;
+	margin:-2px 0 0 21px;
+}
+.gallery ul{
+	list-style:none;	margin:0;	padding:0;
+	width:9999px;
+	overflow:hidden;
+}
+.gallery ul li{
+	float:left;
+	width:193px;
+	margin:0 10px 0 0;
+}
+#footer blockquote {
+	background: url(../images/bg-blockquote.png) no-repeat;
+	width:193px;
+	text-align:center;
+	color:#909090;
+	font:10px/12px "FuroreRegular", Arial, Helvetica, sans-serif;
+}
+#footer blockquote q{
+	display:block;
+	padding:19px 18px 21px;
+	background: url(../images/bg-blockquote-b.png) no-repeat 100% 100%;
+	
+}
+.twocolumns{
+	background: url(../images/bg-twocolumns.gif) repeat-y 450px 0;
+	width:932px;	overflow:hidden;
+	padding:4px 10px 10px;
+	margin:0 0 30px;
+}
+.twocolumns .col{
+	float:left;
+	width:420px;
+	padding:0 46px 0 0;
+}
+.message-block{
+	text-align:center;
+	padding:56px 0 0;
+}
+.message{
+	font:1.166em/1.21em "FuroreRegular", Arial, Helvetica, sans-serif;
+	display:block;
+	margin:0 0 16px;
+}
+.link{
+	font-family: "FuroreRegular", Arial, Helvetica, sans-serif;
+}
+.meta{	overflow:hidden;
+	line-height:23px;
+	color:#909090;
+	padding:0 0 0 59px;
+	text-align:center;
+	font:10px/23px "FuroreRegular", Arial, Helvetica, sans-serif;
+}
+#footer .meta a{
+	color:#909090;
+	float:left;
+}
+.meta ul{
+	float:left;
+	width:263px;
+}
+.meta li{
+	float:left;
+	padding:0 13px 0 0;
+}
+#footer .button{
+	float:left;
+	color:#fff !important;
+	margin-right:36px;
+	font:14px/17px "FuroreRegular", Arial, Helvetica, sans-serif;
+	background: url(../images/bg-button.png) no-repeat;
+	width: 45px;
+	padding:3px;
+	text-align:center;
+}
+#footer h3{
+	color:#909090;
+	margin:0 0 10px;
+	font:1.166em/1.21em "FuroreRegular", Arial, Helvetica, sans-serif;
+}
+#footer .links{
+	text-align:center;
+	margin:0 0 12px;
+}
+#footer .links li{
+	display:inline-block;
+	vertical-align:top;
+	padding:0 10px;
+}
+*+html #footer .links li {
+	display:inline;
+}
+#footer .links a{
+	color:#fff;
+	text-decoration:none;
+}
+#footer .links a:hover{text-decoration:underline;}
+#footer .links a{
+	float:left;
+	padding:0 40px 16px 0;
+}
+#footer .links .rss{background: url(../images/ico-rss.png) no-repeat 100% 2px;}
+#footer .links .mail{background: url(../images/ico-mail.png) no-repeat 100% 2px;}
+#footer .nav{
+	text-align:center;
+	padding:0 0 0 9px;
+}
+#footer .nav li{
+	display:inline-block;
+	vertical-align:top;
+	padding:0 42px;
+}
+#footer .nav a{
+	color:#fff;
+	text-decoration:none;
+	text-shadow: 0 0 4px #000;
+}
+#footer .nav a:hover {
+	text-decoration:underline;
+}
+@font-face {
+	font-family: 'FuroreRegular';
+	src:url('../fonts/furore-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/furore-webfont.woff') format('woff'), url('../fonts/furore-webfont.ttf') format('truetype'), url('furore-webfont.svg#FuroreRegular') format('svg');
+}
+
+
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+
+
+/**
+ * Media queries for responsive design.
+ * These follow after primary styles so they will successfully override.
+ */
+
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+
+}
+
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+
+
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
+/**
+ * Print styles.
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
